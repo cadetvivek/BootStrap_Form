@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      form {
+        background-color: bisque;
+      }
+      body {
+        border-style: solid;
+        color: orange;
+      }
+      input {
+        font-size: 30px;
+        color: green;
+      }
+      button {
+        background-color: orange;
+        width: 400px;
+        height: 40px;
+        color: white;
+      }
+      h1 {
+        color: orange;
+        text-align: center;
+      }
+      p {
+        color: black;
+        text-align: center;
+      }
+      input {
+        width: 400px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Book a call</h1>
+    <p>please fill the form for call</p>
+    <form action="#" onsubmit="onsignup(event)">
+      <label>Name</label><br />
+      <input type="text" name="username" required /><br />
+      <label>Email</label><br />
+      <input type="email" name="email" required /><br />
+      <label>Password</label><br />
+      <input type="password" name="password" required /><br />
+
+      <label>phone</label><br />
+      <input type="phone" name="phone" required /><br />
+      <label for="meeting-time">Choose a time for your appointment:</label
+      ><br />
+
+      <input
+        type="datetime-local"
+        id="meeting-time"
+        name="meeting-time"
+        value="2018-06-12T19:30"
+        min="2018-06-07T00:00"
+        max="2018-06-14T00:00"
+      /><br />
+
+      <button>GET A CALL</button>
+    </form>
+    <script>
+      function onsignup(event) {
+        event.preventDefault();
+        console.log(event.target.username.value);
+      }
+    </script>
+  </body>
+</html>
